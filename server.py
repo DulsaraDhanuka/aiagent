@@ -23,8 +23,6 @@ def generate():
     context = ""
     chat = request.json['chat']
     voice = request.json['voice']
-    print("AAA" if voice else "TTT")
-    exit(0)
     for entry in chat:
         c = f"<|im_start|>{entry['role']}\n"
         if entry['content']['type'] == 'text':

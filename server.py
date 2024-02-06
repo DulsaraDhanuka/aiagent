@@ -5,7 +5,7 @@ from flask import Flask, abort, request, jsonify
 app = Flask(__name__)
 
 llm = Llama(model_path="/kaggle/working/dolphin-2.2.1-mistral-7b.Q6_K.gguf")
-audio_sample = ''
+audio_sample = '/kaggle/working/sample.wav'
 
 def tts(text):
     os.system(f"""tts --model_name tts_models/multilingual/multi-dataset/xtts_v2 \

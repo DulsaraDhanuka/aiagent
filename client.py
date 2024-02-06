@@ -2,7 +2,7 @@ import json
 import requests
 
 #API_ENDPOINT = "http://localhost:5000/generate"
-API_ENDPOINT = "https://7019-35-229-241-82.ngrok-free.app/generate"
+API_ENDPOINT = "https://3671-35-229-241-82.ngrok-free.app/generate"
 
 chat = []
 chat.append({'role': 'system', 'content': {'type': 'text', 'data': 'You are a helpful assistant'}})

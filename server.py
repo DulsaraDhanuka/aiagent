@@ -29,6 +29,7 @@ def generate():
         c += "<|im_end|>\n"
         context += c
     print(context)
+    context = "<|im_start|>assistant"
     response = llm(context, max_tokens=8192, stop=["<|im_end|>"], echo=False)
     print(response)
     response = response["choices"][0]["text"].strip()

@@ -29,7 +29,9 @@ def generate():
         c += "<|im_end|>\n"
         context += c
     print(context)
-    response = llm(context, max_tokens=None, stop=["<|im_end|>"], echo=False)["choices"][0]["text"]
+    response = llm(context, max_tokens=None, stop=["<|im_end|>"], echo=False)
+    print(response)
+    response = response["choices"][0]["text"].strip()
     if voice:
         return jsonify({'role': 'assistant', 'content': {'type': 'audio', 'data': tts(response), 'text': response}})
     else:

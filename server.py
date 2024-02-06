@@ -29,7 +29,7 @@ def generate():
         c += "<|im_end|>\n"
         context += c
     print(context)
-    response = llm(context, max_tokens=None, stop=["<|im_end|>"], echo=False)
+    response = llm(context, max_tokens=8192, stop=["<|im_end|>"], echo=False)
     print(response)
     response = response["choices"][0]["text"].strip()
     if voice:

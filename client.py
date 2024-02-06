@@ -4,7 +4,7 @@ import requests
 from playsound import playsound
 
 #API_ENDPOINT = "http://localhost:5000/generate"
-API_ENDPOINT = "https://5f28-35-229-241-82.ngrok-free.app/generate"
+API_ENDPOINT = "https://c5e1-35-229-241-82.ngrok-free.app/generate"
 
 chat = []
 chat.append({'role': 'system', 'content': {'type': 'text', 'data': 'You are a helpful assistant'}})

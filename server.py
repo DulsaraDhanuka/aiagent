@@ -14,7 +14,7 @@ def tts(text):
          --speaker_wav "{audio_sample}" \
          --language_idx en""")
     enc = None
-    with open('output.wav') as f:
+    with open('tts_output.wav') as f:
         enc = b64encode(f.read())
     return enc
 
